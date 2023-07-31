@@ -20,7 +20,7 @@ class User(Base):
     id = Column(Integer, nullable=False, primary_key=True)
     email = Column(String, nullable=False, unique=True)
     password = Column(String, nullable=False)
-    created_at = Column(TIMESTAMP(timezone=True), server_default=text("now())"))
+    created_at = Column(TIMESTAMP(timezone=True), server_default=text("now()"))
 
 class Like(Base):
     __tablename__ = "likes"
